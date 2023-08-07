@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Properties</title>
+    <style>
+        #box
+        {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combination of MouseEvents and key-pair or Keyboard Events and Key-pairs</h1>
+    <h6>using input tag,selectbox tag,form tag,text area tag</h6>
+    <div id="box"></div>
+    <script>
+        var target =document.querySelector('#box');
+        target.addEventListener('click',function(e)
+        {
+            var text=e.button;
+            var color;
+            switch(text)
+            {
+                case 0:
+                console.log(e.button);
+                    alert("left button");
+                    color="blue";
+                    break;
+                    
+                case 1:
+                    console.log(e.button);
+                    alert("Middle button");
+                    color="green";
+                    break;
+                    
+                case 2:
+                console.log(e.button);
+                    alert("Right button");
+                    color="yellow";
+                    break;
+                
+                default:
+                console.log(e.button);
+                    alert("wrong");
+                    color="red";
+            }
+
+            target.style.backgroundColor=color;
+        });
+    </script>
+</body>
+</html>

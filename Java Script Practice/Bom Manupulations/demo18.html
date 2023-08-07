@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Events</title>
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #myinput
+        {
+            font-size: 21px;
+            padding: 15px;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Clipboard Events</h2>
+    <input type="text" id="myinput">
+
+    <script>
+        var target = document.querySelector("#myinput");
+
+        target.addEventListener('copy',function()
+        {
+            alert("You copy text");
+        });
+
+        target.addEventListener('cut',function()
+        {
+            alert("You cut text");
+        });
+
+        target.addEventListener('paste',function()
+        {
+            alert("You paste text");
+        });
+    </script>
+</body>
+</html>

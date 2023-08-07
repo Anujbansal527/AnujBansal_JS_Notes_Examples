@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moveby() , moveto()</title>
+</head>
+<body>
+    <button onclick="Opw()">Open Window</button>
+    <br>
+    <br>
+    <button onclick="Clw()">Close Window</button>
+    <br>
+    <br>
+    <button onclick="mv()">moveTo Window</button>
+    <br>
+    <br>
+    <button onclick="mv2()">moveBy Window</button>
+
+    <script>
+        var mywin;
+        function Opw()
+        {
+            mywin = window.open("","","width=500px,Height=200px,left=100px,top=200px");
+            mywin.document.write("<p>This is my window</p>");
+        }
+        function Clw()
+        {
+            mywin.close();
+        }
+        function mv()
+        {
+            mywin.moveTo(100,100);
+            mywin.focus();
+        }
+        function mv2()
+        {
+            mywin.moveBy(100,100);
+            mywin.focus();
+        }
+    </script>
+</body>
+</html>

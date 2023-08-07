@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTop and scrollLeft</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        #box {
+            background: blue;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            /* if margine is change then value also change
+            try
+            margin-top: 150px;
+            margin-left: 500px;
+            */
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        #innerbox
+        {
+            background: lightblue;
+            width: 1000px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Thow many scrolling we have donr from left to right and top to down</h1>
+    <div id="box" style="overflow: auto;">
+        <div id="innerbox"></div>
+        <p style="overflow: auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto molestias illum porro ea at eligendi et quos
+            recusandae magnam dicta, quis voluptatum in, libero ipsum quaerat voluptatem tempore fugit ex repellendus
+            incidunt earum! Aut optio, maxime labore id eaque architecto harum ea sit minima alias illo corrupti
+            voluptatum officiis ratione rem nostrum repellat, incidunt beatae velit, commodi vel voluptatibus fugiat?
+            Laborum, corporis. Ipsum soluta nihil mollitia quo repellendus a illo in nulla illum eos dolore veritatis
+            cumque quidem quam et vitae quasi nesciunt, quia at ducimus, reiciendis ipsa fugiat vel earum. Eveniet amet
+            qui earum quos voluptatibus, sapiente, tenetur odit natus est quasi ipsa mollitia ab aperiam laboriosam
+            officiis explicabo. Recusandae impedit iusto dolore quod quisquam soluta, reiciendis tempora laborum harum
+            blanditiis animi officiis ipsum nobis omnis labore. Exercitationem error voluptatibus amet sint totam ipsum
+            facere doloremque facilis ut, labore eveniet nam modi ad rem et. Saepe ad dolore assumenda corrupti hic
+            officiis autem magnam ut distinctio? Molestias velit, quasi quisquam dicta rem laboriosam vitae aliquid ex
+            iure culpa praesentium saepe voluptates corporis soluta magnam aut ratione vel incidunt a odit aliquam? Ad,
+            sint laboriosam. Nesciunt, iste aspernatur! Voluptate pariatur similique laborum voluptatibus molestiae
+            quidem ab officia necessitatibus corrupti impedit cum asperiores deserunt nobis consectetur perferendis,
+            .</p>
+    
+    
+        <div id="demo2" style="position: fixed;left: 50px;bottom: 50px;height: 50px;width: 200px; background-color:whitesmoke;border:3px solid red;"></div>
+         <div id="demo" style="position: fixed;right: 50px;bottom: 50px;height: 50px;width: 200px; background-color:whitesmoke;border:3px solid red;"></div>
+        
+        </div>
+
+        <script>
+        var element;
+        element=document.getElementById("demo");
+
+        const target=document.querySelector("#box");
+        target.addEventListener('scroll',()=>
+        {
+            element.innerText="Up to Down  " + target.scrollTop;
+        })
+      
+        var element2;
+        element2=document.getElementById("demo2");
+        
+        const target2=document.querySelector("#box");
+        target2.addEventListener('scroll',()=>
+        {
+            element2.innerText="left to right  " + target2.scrollLeft;
+        })
+        </script>
+</body>
+</html>

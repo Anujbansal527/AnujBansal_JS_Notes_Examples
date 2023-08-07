@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object Methods</title>
+</head>
+<body>
+    <h1>JavaScript : Location object Methods</h1>
+    <button onclick="reloadFun()">Click me for reloading</button>
+    <button onclick="assingFun()">Click me for new assinged page</button>
+    <button onclick="replaceFun()">Click me for new replaced page</button>
+
+    <script>
+        function reloadFun()
+        {
+            location.reload();
+        }
+        function assingFun()
+        {
+            location.assign("https://www.google.com");
+        }
+        function replaceFun()
+        {
+            //page wil replaced because last page will removed
+            location.replace("https://www.google.com");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Properties</title>
+    <style>
+        #box
+        {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combination of MouseEvents and key-pair or Keyboard Events and Key-pairs</h1>
+    <h6>using input tag,selectbox tag,form tag,text area tag</h6>
+    <div id="box"></div>
+    <script>
+        var target =document.querySelector('#box');
+        target.addEventListener('click',function(e)
+        {
+            var ctrl=e.ctrlKey;
+            var shift=e.shiftKey;
+            var alt=e.altKey;
+            var meta=e.metaKey;
+            //tocheck is key press or not console.log(ctrl);
+            if (ctrl)
+            {
+                alert("You have pressed Control Key");
+            }
+            else if(shift)
+            {
+                alert("You have pressed Shift Key");
+            }
+            else if(alt)
+            {
+                alert("You have pressed Alt Key");
+            }
+            else if(meta)
+            {
+                alert("You have pressed Meta Key");
+            }                      
+            else
+            {
+                alert("You have clicked wrong key");
+            }
+        });
+    </script>
+</body>
+</html>

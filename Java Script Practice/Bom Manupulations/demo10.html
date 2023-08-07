@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offsetTop and offsetLeft</title>
+    <style>
+        body
+        {
+            margin: 0;
+        }
+        #box {
+            background: blue;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+            /* if margine is change then value also change
+            try
+            margin-top: 150px;
+            margin-left: 500px;
+            */
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>height and width at what position box is situated</h1>
+    <div id="box" style="overflow: auto;">
+        <p style="overflow: auto;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto molestias illum porro ea at eligendi et quos
+            recusandae magnam dicta, quis voluptatum in, libero ipsum quaerat voluptatem tempore fugit ex repellendus
+            incidunt earum! Aut optio, maxime labore id eaque architecto harum ea sit minima alias illo corrupti
+            voluptatum officiis ratione rem nostrum repellat, incidunt beatae velit, commodi vel voluptatibus fugiat?
+            Laborum, corporis. Ipsum soluta nihil mollitia quo repellendus a illo in nulla illum eos dolore veritatis
+            cumque quidem quam et vitae quasi nesciunt, quia at ducimus, reiciendis ipsa fugiat vel earum. Eveniet amet
+            qui earum quos voluptatibus, sapiente, tenetur odit natus est quasi ipsa mollitia ab aperiam laboriosam
+            officiis explicabo. Recusandae impedit iusto dolore quod quisquam soluta, reiciendis tempora laborum harum
+            blanditiis animi officiis ipsum nobis omnis labore. Exercitationem error voluptatibus amet sint totam ipsum
+            facere doloremque facilis ut, labore eveniet nam modi ad rem et. Saepe ad dolore assumenda corrupti hic
+            officiis autem magnam ut distinctio? Molestias velit, quasi quisquam dicta rem laboriosam vitae aliquid ex
+            iure culpa praesentium saepe voluptates corporis soluta magnam aut ratione vel incidunt a odit aliquam? Ad,
+            sint laboriosam. Nesciunt, iste aspernatur! Voluptate pariatur similique laborum voluptatibus molestiae
+            quidem ab officia necessitatibus corrupti impedit cum asperiores deserunt nobis consectetur perferendis,
+            quis minima quae aperiam veritatis illum. Assumenda beatae officia illo sit ipsum qui repellat at blanditiis
+            vel sint amet suscipit sed minus fugiat, quas sequi harum impedit pariatur facilis fuga. Sequi, ipsam id.
+            Voluptatem repellendus dolores aliquam, odit praesentium, saepe ipsa mollitia assumenda in asperiores
+            repellat aperiam iste vel! Molestias qui soluta ad tempora nam maxime! Rem numquam nobis doloremque
+            dignissimos consequuntur ratione dolores blanditiis explicabo earum ab non dolorem, neque eligendi
+            praesentium, nihil, aperiam a? Aspernatur autem excepturi, odit rem possimus ad expedita voluptatum non
+            commodi veniam explicabo mollitia veritatis dicta molestias doloribus quod nesciunt, quidem nihil, fuga
+            voluptatem harum nemo a distinctio debitis. Facere, provident iusto ipsum eos ab soluta labore asperiores
+            ducimus impedit fuga quod beatae hic excepturi sequi numquam ullam, itaque reprehenderit eveniet debitis
+            magni. Nesciunt voluptatibus similique vero nam tempora! Vitae nostrum delectus reiciendis ullam nemo autem
+            molestiae, culpa ab? Hic cum eveniet provident beatae, veritatis tenetur vitae, molestiae, quibusdam dolorem
+            quae labore distinctio sed vero ratione quas ex! Consectetur assumenda, quam quae quos tempore tempora saepe
+            earum corporis unde consequuntur fuga incidunt doloribus obcaecati accusamus. Distinctio, fugit facilis!
+            Incidunt minus ipsum repudiandae error, nisi nihil numquam voluptatum quidem saepe suscipit nam est corporis
+            officia explicabo molestias sunt illum quia pariatur nulla! Distinctio voluptatem quod omnis doloremque
+            quibusdam dolorem sed cumque, nemo sequi vero aliquid voluptate! Eum iusto ut possimus rem alias soluta
+            velit illo, accusantium dignissimos voluptate vel quas numquam recusandae explicabo voluptatibus at, sint
+            facere aperiam doloremque ad maiores minima delectus amet. Sint aspernatur adipisci eos possimus magni!
+            Nulla, enim. Quisquam ex excepturi ratione possimus odio natus porro? Velit, nisi! Odit accusamus laboriosam
+            eaque quae quo molestiae minus magnam, totam, sit molestias eum alias optio consequatur suscipit sed enim,
+            delectus blanditiis harum ex ut quibusdam. Reprehenderit, tenetur.</p>
+    
+    
+        <div id="demo2" style="position: fixed;left: 50px;bottom: 50px;height: 50px;width: 200px; background-color:whitesmoke;border:3px solid red;"></div>
+         <div id="demo" style="position: fixed;right: 50px;bottom: 50px;height: 50px;width: 200px; background-color:whitesmoke;border:3px solid red;"></div>
+        
+        </div>
+
+        <script>
+        
+        var element;   
+        element=document.getElementById("demo");
+        element.innerText="Box offsetleft " + box.offsetLeft;
+        
+        var element2;
+        element2=document.getElementById("demo2");
+        element2.innerText="Box offsetTop " + box.offsetTop;
+      
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+</head>
+<body>
+    <h1>JavaScript : History object</h1>
+    
+    <script>
+        document.write("<h1> History properties</h1>");
+
+        document.write("History  ",history,"  this is an array of property present in history object o check array go to console");
+        console.log("History  ",history);
+        document.write("<br>");
+
+        document.write("History lenght  ",history.length);
+        console.log("History lenght  ",history.length);
+        document.write("<br>");
+
+        document.write("<h1> History methods</h1>");
+
+        document.write('<button onclick="bckbtn()">Back Button</button>');
+
+        function bckbtn()
+        {
+            history.back();
+        }
+
+        document.write('<button onclick="frwbtn()">Forward Button</button>');
+        function frwbtn()
+        {
+            history.forward();
+        }
+        
+        //this will worksas backward and fowrwrd
+        //parameter will give to how manay page shold be forward and backward
+        document.write('<button onclick="gobtnfwd()">Go forward Button</button>');
+        function gobtnfwd()
+        {
+            history.go(2);
+            //forward to 2 page
+        }
+        
+        
+        document.write('<button onclick="gobtnback()">Go backward Button</button>');
+        function gobtnback()
+        {
+            history.go(-2);
+            //backward to 2 page
+        }
+    </script>
+</body>
+</html>

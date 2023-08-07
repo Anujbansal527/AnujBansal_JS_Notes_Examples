@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom manupulations Open Close</title>
+</head>
+<body>
+    <button onclick="Opw()">Open Window</button>
+    <br>
+    <br>
+    <button onclick="Clw()">Close Window</button>
+
+    <script>
+        var mywin;
+        function Opw()
+        {
+            mywin = window.open("http://www.google.com","","width=500px,Height=200px,left=100px,top=200px");
+        }
+        function Clw()
+        {
+            mywin.focus();
+            mywin.close();
+        }
+    </script>
+</body>
+</html>

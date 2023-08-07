@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form Events windows</title>
+</head>
+
+<body>
+    <form action="" onsubmit="sub()">
+        <label for="">Name</label>
+        <input type="text" id="fname" onfocus="focusfn()" onblur="blurfn()" oninput="inp(this)" value="Demo Name to check change function" onchange="chg()" onselect="sel()" oninvalid="alert('invalid')">
+        <br><br>
+
+        <label for="">Class</label>
+        <input type="text" id="" onfocus="focusfn1(this)" onblur="blurfn1(this)">
+        <br><br>
+
+        <label for="">Country</label>
+        <select name="" id="" onfocus="focusfn1(this)" onblur="blurfn1(this)" onchange="chg(this)">
+            <option value="india">India</option>
+            <option value="usa">Usa</option>
+            <option value="canada">Canada</option>
+            <option value="nepal">Nepal</option>
+        </select>
+        <input type="submit">
+    </form>  
+    <br>
+    <div id="test" style="border: 3px solid red; "></div>
+    
+    <script>
+        //focus functions
+        function focusfn()
+        {
+            document.getElementById("fname").style.background = "lime";
+        }
+        //other way
+        function focusfn1(element)
+        {
+            element.style.background = "lime";
+        }
+
+        //blur function
+        function blurfn()
+        {
+            document.getElementById("fname").style.background = "";
+        }
+        //
+        function blurfn1(element)
+        {
+            element.style.background = "";
+        }
+
+        //input function
+        function inp(element)
+        {
+            var x = element.value;
+            document.getElementById("test").innerHTML= x;
+        }
+
+        //change function
+        function chg(element)
+        {
+            var x = element.value;
+            document.getElementById("test").innerHTML= x;
+        }
+
+        //select function
+        function sel()
+        {
+          console.log("you select",);  
+        }
+
+        //submit function
+        function sub()
+        {
+           alert("You submite form");
+        }
+    </script>
+</body>
+</html>
