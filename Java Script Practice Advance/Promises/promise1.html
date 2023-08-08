@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise </title>
+</head>
+<body>
+
+    <script>
+        let complete = true;
+        let prom = new Promise(function(resolve,reject){
+            if(complete){
+                resolve("I am Sucessfull ");
+            }
+            else{
+                reject("I am Faild ");
+            }
+        });
+        console.log(prom);
+    </script>
+</body>
+</html>

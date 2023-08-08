@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        let welcome =(name) =>
+        {
+            return `hello & welcome ${name} \n`;
+        }
+        document.write(welcome("person"));
+        document.write("<br>");
+        //if you know there only one line code will bi written so you can write it as
+        let wel = (name)=>`hello&welcome${name} \n`;
+        document.write(wel("name of person"));
+        document.write("<br>");
+        document.write(typeof wel);
+    </script>
+</body>
+</html>

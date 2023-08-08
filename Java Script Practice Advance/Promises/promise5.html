@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise </title>
+</head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        function prom(complete){
+            
+            return new Promise(function(resolve,reject){
+               
+            //pendding stage   
+            console.log("fetching data, please wait");
+            //using ajax function   
+            setTimeout( () => 
+               {
+                      $.get("https://jsonplaceholder.typicode.com/posts",function(data)
+                      {
+                        resolve(data);
+                      }).fail(err => {
+                        reject('Error');
+                      })
+                    },2000)   
+            });
+        }
+
+       
+        prom(true).then((result) => {
+            console.log(result);
+        });
+        prom(true).catch((result) => {
+            console.log(error);
+        });
+          
+        
+    </script>
+</body>
+</html>

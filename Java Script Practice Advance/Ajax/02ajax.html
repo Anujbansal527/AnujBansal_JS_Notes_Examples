@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <p id="demo">Here WE load data</p>
+    <button onclick="LoadData()">Click</button>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+        function LoadData() 
+        {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200)
+                        //here thihs point to xhttp
+                {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+                else if(this.readyState == 4 && this.status == 404)
+                {
+                    document.getElementById("demo").innerHTML = "FIle not found";
+                }
+            };
+
+                            //using json path
+            xhttp.open('GET',"https://jsonplaceholder.typicode.com/posts",true)
+                        //used method:(GET,POST),path of the file,for async=true sync=false
+            xhttp.send();
+                        //request send to server
+        }
+    </script>
+</body>
+</html>

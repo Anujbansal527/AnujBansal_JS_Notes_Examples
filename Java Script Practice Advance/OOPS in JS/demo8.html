@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //multiple inheritance
+        class employee
+        {
+            constructor(name,age,salary)
+            {
+                this.empname = name;
+                this.empage = age ;
+                this.empsalry  = salary;
+                console.log("constructor : employee");
+            }
+            info()
+            {
+                document.write(`<h3>Employee class</h3>
+                                Name: ${this.empname}<br>
+                                Age: ${this.empage}<br>
+                                Salary: ${this.empsalry}<br>`)
+            }
+        }
+        class manager extends employee
+        {
+            info()
+            {
+                let ta=1000;
+                let pa=300;
+                let total=this.empsalry+ta+ps;
+                document.write(`<h3>Manager Class</h3>
+                                Name: ${this.empname}<br>
+                                Age: ${this.empage}<br>
+                                Salary: ${total}<br>`);
+            }
+        }
+        class test extends manager
+        {
+        
+        }
+        let a = new test("name1",25,20000);
+        let b = new manager("mname",35,25000);
+        </script>
+</body>
+</html>

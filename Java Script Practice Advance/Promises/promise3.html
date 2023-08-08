@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise </title>
+</head>
+<body>
+
+    <script>
+        function prom(complete){
+            
+            return new Promise(function(resolve,reject){
+               
+            //pendding stage   
+            console.log("fetching data, please wait");
+               setTimeout( () => 
+               {
+                if(complete){
+                    resolve("I am Sucessfull ");
+                }
+                else{
+                    reject("I am Faild ");
+                }
+               },3000);         
+            });
+        }
+
+        //on resolve
+        let onfulfilment = (result) =>
+        {
+            console.log(result);
+        }
+
+        //on reject
+        let onRejection =(error) =>
+        {
+            console.log(error);
+        }
+
+        prom(true).then(onfulfilment);
+        prom(true).catch(onRejection);
+                 //inbuild call back function catch(if false) and then(if true)
+
+        //we can method chainig to bind in single line
+        //prom(false).then(onfulfilment).catch(onRejection);
+
+    </script>
+</body>
+</html>

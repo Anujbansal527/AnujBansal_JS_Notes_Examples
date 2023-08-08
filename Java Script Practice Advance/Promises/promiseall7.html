@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promiseall() </title>
+</head>
+<body>
+
+    <script>
+       let promisecall = function(returnData,reject)
+       {
+        return function(resolve,reject)
+        {
+        setTimeout(() => {
+            console.log(`the ${message} promise has resolved`);
+            resolved(returnData);
+        },returnData*100);
+        }
+       };
+
+       let p1 = new Promise(promisecall(10,"first"));
+       let p2 = new Promise(promisecall(20,"Second"));
+       let p3 = new Promise(promisecall(30,"Third"));
+       //let p4 = new Promise(function(resolve,reject){reject("the 4th function is rejected ");});
+       
+
+       var total=0;
+       //Promise.all([p1,p2,p3,p4]).then((result) =>
+       Promise.all([p1,p2,p3]).then((result) =>
+       {
+        for(var i in result)
+        {
+            total+=result[i];
+        }
+        console.log(`Results : ${result} `)
+       }).catch((error) => {
+        console.log(`Results : ${error} `)
+       });
+
+       //if all promise is fullfield the promiseall then function works else catch worked
+    </script>
+</body>
+</html>

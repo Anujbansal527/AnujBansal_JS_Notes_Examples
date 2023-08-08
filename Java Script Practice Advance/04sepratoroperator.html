@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seprator oprators</title>
+</head>
+<body>
+    <script>
+        document.write("without using rest operator it create copy and both array will changed");
+        
+        var arr1 = [10,20,30,40];
+        var arr2 = arr1;
+        document.write("<br/>");
+        document.write("array 1 "+arr1);
+        document.write("<br/>");
+        document.write("pusing element "+arr1.push(50));
+        document.write("<br/>");
+        document.write("copying array "+arr2)
+
+        document.write("<h1>Using seprator operator</h1>");
+        var arr1 = [10,20,30,40];
+        var arr2 = [...arr1];
+        document.write("<br/>");
+        document.write("array 1 "+arr1);
+        document.write("<br/>");
+        document.write("pusing element "+arr1.push(50));
+        document.write("<br/>");
+        document.write("copying array "+arr2)
+
+        document.write("<h1>concating 2 array Using seprator operator</h1>");
+        var arr1 = [10,20,30,40];
+        var arr2 = [12,12,31,14,21];
+        var arr3 = [45,...arr2,...arr1,12];
+        document.write("<br/>");
+        document.write("array 1 "+arr1);
+        document.write("<br/>");
+        document.write("array 2 "+arr2);
+        document.write("<br/>");
+        document.write("concating array "+arr3)
+
+        document.write("<h1>seprator operator with object</h1>");
+        var obj1=
+        {
+            name:"demo name",
+            course:"mca"
+        };
+        var obj2=
+        {
+            age:23
+        };
+        var obj3=
+        {
+            ...obj1,...obj2
+        }
+        document.write(obj3);
+    </script>
+</body>
+</html>

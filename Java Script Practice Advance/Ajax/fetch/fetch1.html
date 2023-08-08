@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Method</title>
+</head>
+<body>
+
+    <script>
+        /* 
+        //normal file example
+         fetch("//file path")
+        .then((response)=>
+        {
+            //to check response console.log(response);
+            return (response.text());
+        })
+        .then((data)=>
+        {
+           document.write(data);
+        });
+        */
+        
+        /*
+        //using jason
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response)=> response.json())
+        .then((data) => console.log(data) );
+        */
+
+        //using jason with error
+        fetch("https://jsonplaceholder.typicode.com/1users")
+        //error occured because there is no 1users exists
+        .then((response)=> response.json())
+
+        .then((data) => 
+        {console.log(data)
+        //for printing data
+        for(var x in data)
+        {
+            var a=`${data[x].name} - ${data[x].age} -${data[x].city}<br>`;
+            document.write(a);
+        }})
+        //catch will run if there is an problem of fetching data 
+        .catch((error) => document.write("Cant fetch data"));
+    
+
+    </script>
+</body>
+</html>

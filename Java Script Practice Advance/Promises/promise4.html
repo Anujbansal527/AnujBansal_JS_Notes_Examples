@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise </title>
+</head>
+<body>
+
+    <script>
+        function prom(complete){
+            
+            return new Promise(function(resolve,reject){
+               
+            //pendding stage   
+            console.log("fetching data, please wait");
+               setTimeout( () => 
+               {
+                if(complete){
+                    resolve("I am Sucessfull ");
+                }
+                else{
+                    reject("I am Faild ");
+                }
+               },3000);         
+            });
+        }
+
+       
+        prom(true).then((result) => {
+            console.log(result);
+        });
+        prom(true).catch((result) => {
+            console.log(error);
+        });
+          
+        
+    </script>
+</body>
+</html>

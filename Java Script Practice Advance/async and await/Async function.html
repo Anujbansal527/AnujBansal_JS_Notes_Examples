@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function</title>
+</head>
+<body>
+    <script>
+       /*
+        async function test()
+        {
+            return "hello"
+        }
+        console.log(test());
+        //promise will returned
+        */
+       /*
+       //async with arrow function
+       let test = async () => {
+        return "hello";
+       }
+       test().then(result) =>
+       {
+        console.log(result);
+       }
+       */
+
+        async function test()
+        {
+            return "hello"
+        }
+        //we can use promise function here than and catch
+       test().than((result)=>
+       console.log(result));       
+    </script>
+</body>
+</html>
